@@ -1,0 +1,41 @@
+1) API Request should be given in url parameters and API Response is in JSON Format.
+-----> No Risk
+
+
+2) Date Format is in UNIX Milli Seconds.
+-----> No Risk
+
+
+3) The Authentication is OAuth2.0. ConnectAll can make use of API Key Authentication.
+-----> No Risk
+
+
+4) Metadata
+	i) It has project scope like portals and projects
+	ii) It has issue type scope like bugs and it is hardcoded
+-----> No Risk
+
+
+5) Field Mapping:
+	i) There are standard fields published in the documentation
+	ii) There are custom fields published in the documentation
+-----> No Risk
+
+
+6) i) Comments is doable for this Adapter
+   ii) Read attachments is doable but there is no api to create attachments 
+-----> Slight Risk
+
+
+7) API Configuration:
+	i) Query Modified Records: /restapi/portal/${portal}/projects/${projects}/bugs/?last_modified_time=${last-modified-time}
+	ii) Read Record By ID: /restapi/portal/${portal}/projects/${projects}/bugs/${recordId}/
+	iii) Create Record: /restapi/portal/${portal}/projects/${projects}/bugs/?${fields[ValueSeparator:'='] [FieldSeparator:'&']}
+	iv) Update Record: /restapi/portal/${portal}/projects/${projects}/bugs/${recordId}/?${fields[ValueSeparator:'='] [FieldSeparator:'&']}
+-----> No Risk
+
+
+8) In the url: assignee=(assignee_id) to set the assignee
+
+
+9) Flow Filter is doable for this adapter
